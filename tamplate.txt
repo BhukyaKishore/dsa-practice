@@ -1,0 +1,133 @@
+//find elements and fequencies
+//convrting set to vector and viseversa
+//try to know that 28 patrens in that video 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// class Solution {
+// public:
+//     void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
+//         int i=m-1,j=n-1,k=m+n-1;
+//         while(i>=0 || j>=0){
+//             if (nums1[i]>=nums2[j] || i<0){
+//                 nums1[k]=nums1[i];
+//                 k--;
+//                 i--;
+//             }else if (nums1[i]<=nums2[j] || j<0){
+//                 nums1[k]=nums2[j];
+//                 k--;
+//                 j--;
+//             }
+            
+//         }
+//     }
+// };
+
+// int main() {
+//     vector<int> nums1 = {2,0};
+//     vector<int> nums2 = {1};
+//     int m = 1;
+//     int n = 1;
+
+//     Solution sol;
+//     sol.merge(nums1, m, nums2, n);
+
+//     for (int num : nums1) {
+//         cout << num << " ";
+//     }
+//     cout << endl;
+
+//     return 0;
+// }
+
+
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// class Solution{
+// public:
+    
+// };
+
+// int main(){
+//     vector<int> vec={1,-2,2,3,5,8};
+//     Solution s;
+    
+//     return 0;
+// }
+
+
+//talin 2d input 
+vector<vector<vector<int>>> test_case{};
+    int n;
+
+    cin >> n;
+
+    for(int i; i < n; ++i) {
+        vector<vector<int>> matrix{};
+
+        for (int j = 0; j < 3; ++j) {
+            vector<int> line{};
+
+            for (int k = 0; k < 3; ++k) {
+                int entry;
+
+                cin >> entry;
+                line.push_back(entry);
+            }
+
+            matrix.push_back(line);
+
+        }
+
+        test_case.push_back(matrix);
+
+        cout << "\n" << matrix.at(2).at(1);
+    }
+
+
+
+
+    //taling 1d vector input
+
+    
+// git init
+// git add .
+// git commit -m "Initial commit"
+// git remote add origin https://github.com/bhavani/myproject.git
+// git push -u origin main

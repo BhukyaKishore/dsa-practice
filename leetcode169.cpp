@@ -37,17 +37,37 @@ class Solution{
             }
         }
     }
+
+    //moores voting algorithm
+    // time complexcity O(n)
+    int majorityelement(vector<int>& nums){
+        int freq=0,ans=0;
+        for(int i=0;i<nums.size();i++){
+            if(freq==0){
+                ans=nums[i];
+            }
+            if(ans==nums[i]){
+                freq++;
+            }else{
+                freq--;
+            }
+        }
+        return ans;
+        //this works in a such a way that every element freq get zero after some time because majority elememt present more then n/2 time
+        //when other element frequence get 0 then it assign majority element in ans and it's frequency never get zero finally it's in the solution
+        //this is moores voting algorithm 
+    }
 };
 
 int main(){
     Solution s;
     vector<int> vec;
-    // vec={3,1,3,3,3,4,2,2,3};
-    // cout<<s.majoriyElemrnt_bruteforce(vec)<<endl;
+    vec={3,1,3,3,3,4,2,2,3};
+    cout<<s.majorityelement(vec)<<endl;
     vec={1,1,1,2,2};
-    cout<<s.majoriyElemrnt_bruteforce(vec)<<endl;
+    cout<<s.majorityelement(vec)<<endl;
     vec={0,5,5,5,5};
-    cout<<s.majoriyElemrnt_bruteforce(vec)<<endl;
+    cout<<s.majorityelement(vec)<<endl;
     return 0;
 
 }
