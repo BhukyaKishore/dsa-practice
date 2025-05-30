@@ -1,14 +1,12 @@
 class Solution {
 public:
-    int peakIndexInMountainArray(vector<int>& arr) {
-        int l = 0, r = arr.size() - 1, mid;
-        while (l < r) {
-            mid = (l + r) / 2;
-            if (arr[mid] < arr[mid + 1])
-                l = mid + 1;
-            else
-                r = mid;
+    bool canJump(vector<int>& nums) {
+        int index = 0, maxReach = 0;
+        while (index <= maxReach) {
+            maxReach = max(maxReach, index + nums[index]);
+            if (maxReach >= nums.size() - 1) return true;
+            index++;
         }
-        return l;
+        return false;
     }
 };
