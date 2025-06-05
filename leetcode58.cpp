@@ -24,12 +24,26 @@ Constraints:
 s consists of only English letters and spaces ' '.
 There will be at least one word in s.*/
 #include<iostream>
-#include<vector>
 #include<string>
 using namespace std;
 class Solution {
     public:
         int lengthOfLastWord(string s) {
-            return 0;
+            int count=0;
+            for(int i=s.size()-1;i>=0;i--){
+                if(s[i]!=' '){
+                    count++;
+                }
+                if(count>0 && s[i]==' '){
+                    return count;
+                }
+            }
+            return count;
         }
-};
+}cls;
+
+int main(){
+    string k="luffy is still joyboy";
+    cout<<cls.lengthOfLastWord(k)<<endl;
+    return 0;
+}
