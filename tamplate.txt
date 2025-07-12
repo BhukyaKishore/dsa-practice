@@ -92,6 +92,8 @@
 // }
 
 
+// to run in windows  g++ leetcode258.cpp; if ($?) { .\a.exe }
+
 //talin 2d input 
 vector<vector<vector<int>>> test_case{};
     int n;
